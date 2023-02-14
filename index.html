@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html lang="en-us">
   <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Bootstrap Visualization Dashboard</title>
 
@@ -16,17 +18,62 @@
 
   <body>
     <!-- Start of navbar -->
-    <div class="container">
-      <nav class="navbar">
-        <ul>
-          <li>
-            <a href ="https://www.google.com/">Google</a>
-        </u1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="https://nebulacrasher.github.io/Web-Design-Challenge/">Weather Comparisons</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://nebulacrasher.github.io/Web-Design-Challenge/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comparison.html">Comparisons</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Plots
+            </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="visualizations/cloudiness.html">Cloudiness</a>
+                  <a class="dropdown-item" href="visualizations/humidity.html">Humidity</a>
+                  <a class="dropdown-item" href="visualizations/temp.html">Temperature</a>
+                  <a class="dropdown-item" href="visualizations/wind.html">Wind Speed</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="data.html">Data</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <!-- End of navbar -->
 
     <!-- Start of container -->
+    <div class="container-fluid">
           <!-- Start of Visualizations imageNav Area -->
+          <div class="row">
+            <div class="col-lg-7 col-md-12">
+                <div class="box" style="padding-bottom: 20px;">
+                    <h3 class="title">SUMMARY: LATITUDE VS. X</h3>
+                    <hr>
+                    <img src="assets/images/Fig1.png" class="vizualization rounded float-left" alt="City Latitude vs Max Temperature">
+                    <p> This project explored the relationships between varying latitudes and their characteristics.</p>
+                    <p> The following aforementioned relationships are:<br>
+                        <ul><li>Temperature (F) vs. Latitude</li>
+                            <li>Humidity (%) vs. Latitude</li>
+                          <li>Cloudiness (%) vs. Latitude</li>
+                          <li>Wind Speed (mph) vs. Latitude</li>
+                        </ul>
+                    </p>
+                    <p> To create these scatter plots, Matplotlib was used. This site shows the data and visualizations that
+                        were created to show the analysis, and also has descriptions to each of the visualizations that were made.
+                    </p>
+                </div>
+            </div>
           <!-- End of the Visualizations imageNav Area -->
+    </div>
     <!-- End of container -->
 
     <!-- jQuery CDN -->

@@ -1,0 +1,47 @@
+.navbar li{
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(6, 93, 6);
+    padding: 20px;
+    position:relative;
+    left:1500px;
+    cursor:pointer;
+    border-radius: 3px;
+}
+.nav-link{
+    color:lightcoral;
+    text-decoration-line: underline;
+} 
+.navbar-brand{
+    position: fixed;
+}
+
+.table-responsive {
+    overflow-x:auto; 
+    overflow-y:auto; 
+    max-height:470px; 
+    max-width: auto;
+  }
+  @media(max-width: 1500px) {
+      .data-container {
+        padding: 1em;
+        text-align: center;
+      }
+      .navbar-expand-lg {
+      background-color: rgb(240, 240, 240);
+      }
+      .navbar div {
+        margin: inherit;
+        background-color: rgb(251, 251, 251);
+      }
+      .navbar-brand {
+        padding: 10px;
+      }
+      button{
+        margin-right: 30px;
+      }
+      button:focus {
+        outline: 1px dotted;
+        outline: auto 5px;
+      }
+    }
