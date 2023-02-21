@@ -18,65 +18,78 @@
 
   <body>
     <!-- Start of navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <a class="navbar-brand" href="https://nebulacrasher.github.io/Web-Design-Challenge/">Weather Comparisons</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="https://nebulacrasher.github.io/Web-Design-Challenge/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="comparison.html">Comparisons</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Plots
-            </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="visualizations/cloudiness.html">Cloudiness</a>
-                  <a class="dropdown-item" href="visualizations/humidity.html">Humidity</a>
-                  <a class="dropdown-item" href="visualizations/temp.html">Temperature</a>
-                  <a class="dropdown-item" href="visualizations/wind.html">Wind Speed</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="data.html">Data</a>
-          </li>
-        </ul>
-      </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://nebulacrasher.github.io/Web-Design-Challenge/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comparison.html">Comparisons</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="data.html">Data</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="visualizations/cloudiness.html">Cloudiness</a>
+                    <a class="dropdown-item" href="visualizations/humidity.html">Humidity</a>
+                    <a class="dropdown-item" href="visualizations/temp.html">Temperature</a>
+                    <a class="dropdown-item" href="visualizations/wind.html">Wind Speed</a>
+                </div>
+            </li>
+          </ul>
+        </div>
     </nav>
     <!-- End of navbar -->
 
-    <!-- Start of container -->
-    <div class="container-fluid">
-          <!-- Start of Visualizations imageNav Area -->
-          <div class="row">
-            <div class="col-lg-7 col-md-12">
-                <div class="box" style="padding-bottom: 20px;">
-                    <h3 class="title">SUMMARY: LATITUDE VS. X</h3>
-                    <hr>
-                    <img src="assets/images/Fig1.png" class="vizualization rounded float-left" alt="City Latitude vs Max Temperature">
-                    <p> This project explored the relationships between varying latitudes and their characteristics.</p>
-                    <p> The following aforementioned relationships are:<br>
-                        <ul><li>Temperature (F) vs. Latitude</li>
-                            <li>Humidity (%) vs. Latitude</li>
-                          <li>Cloudiness (%) vs. Latitude</li>
-                          <li>Wind Speed (mph) vs. Latitude</li>
-                        </ul>
-                    </p>
-                    <p> 
-                      In order to produce these figures, data was taken from the OpenWeatherMap API from a total of
-                      over 500 cities. This website provides this data as well as the visualizations resulting from said data.
-                      Matplotlib was used to produce said visualizations.
-                    </p>
-                </div>
-            </div>
-          <!-- End of the Visualizations imageNav Area -->
+<!-- Start of container -->
+<div class="container-fluid">
+  <div class="column-md-4">
+      <h3 class="title">SUMMARY: LATITUDE VS. X</h3><hr>
+      <img src="assets/images/temp.png" class="vizualization rounded float-left" alt="City Latitude vs Max Temperature">
+      <p> This project is meant to explore how a change in latitude affects a location's climate. Taking a random sample of over 500 cities
+        from OpenWeatherAPI the following visualizations were produced:
+      </p><br>
+      <p>
+        <ul><li>Temperature (F) vs. Latitude</li>
+            <li>Humidity (%) vs. Latitude</li>
+            <li>Cloudiness (%) vs. Latitude</li>
+            <li>Wind Speed (mph) vs. Latitude</li>
+          </ul>
+      </p>
+      <p> Explore the website to see a more detailed view of the graphs. There is also a data section where you're free to see the data utilized.</p>
+  </div>
+  <div class = "column-md-8">
+    <div class = "column-sm">
+      <h3>Visualizations</h3><hr>
+      <p>Cloudiness Graph</p>
+      <a href="visualizations/cloudiness.html">
+      <img class = "image" src="assets/images/cloudiness.png" alt="Cloudiness Graph">
+      </a>
+      <p>Humidity Graph</p>
+      <a href="visualizations/humidity.html">
+      <img class = "image" src="assets/images/humidity.png" alt="Humidity Graph">
+      </a>
     </div>
-    <!-- End of container -->
+    <div class = "column-sm">
+      <p>Temperature Graph</p>
+      <a href="visualizations/temp.html">
+      <img class = "image" src="assets/images/temp.png" alt="Temperature Graph">
+      </a>
+      <p>Wind Speed Graph</p>
+      <a href="visualizations/wind.html">
+      <img class = "image" src="assets/images/wind.png" alt="Wind Speed Graph">
+      </a>
+    </div>
+  </div>
+</div>
+<!-- End of container -->
 
     <!-- jQuery CDN -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Add a title here -->
-
+    <title>Cloudiness Graph</title>
     <!-- Boostrap Stylesheet -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css" media="screen">
 
@@ -18,13 +18,70 @@
 
   <body>
     <!-- Start of navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="https://nebulacrasher.github.io/Web-Design-Challenge/">Weather Comparisons</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://nebulacrasher.github.io/Web-Design-Challenge/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comparison.html">Comparisons</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Plots
+            </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="visualizations/cloudiness.html">Cloudiness</a>
+                  <a class="dropdown-item" href="visualizations/humidity.html">Humidity</a>
+                  <a class="dropdown-item" href="visualizations/temp.html">Temperature</a>
+                  <a class="dropdown-item" href="visualizations/wind.html">Wind Speed</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="data.html">Data</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <!-- End of navbar -->
 
     <!-- Start of container -->
-
-          <!-- Start of Visualizations imageNav Area -->
-          <!-- End of the Visualizations imageNav Area -->
-
+    <div class="container-fluid">
+      <div class="col-md">
+      <style>
+        body{
+          background-color: rgb(185, 173, 209);
+        }
+        h3{
+          color:rgb(18, 106, 189);
+          text-decoration: underline;
+          font-family:fantasy;
+          font-size: 40px;
+        }
+        .image{
+          width:600px;
+          height:auto;
+        }
+        p{
+          font-family:'Times New Roman', Times, serif;
+          font-size: 25px;
+        }
+      </style>
+        <h3>Cloudiness Graph</h3>
+        <img class = "image" src="../assets/images/cloudiness.png" alt="Cloudiness Graph">
+        <p>
+          This graph explores the relationship between latitude change in the northerly direction away from the equator.
+          The fitted line indicates that despite the seemingly randomly distributed points, the data shows that cities tend to 
+          be cloudier the further you travel away from the equator. This graph could help someone decide whether or not a new 
+          location for a home is suitable for them based on cloudiness.
+        </p>
+      </div>
+    </div>
     <!-- End of container -->
 
     <!-- jQuery CDN -->
